@@ -1,0 +1,11 @@
+c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\bin\Debug\KeyGen.exe.config
+c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\bin\Debug\KeyGen.exe
+c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\bin\Debug\KeyGen.pdb
+c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.csprojResolveAssemblyReference.cache
+c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.Properties.Resources.resources
+c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.csproj.GenerateResource.Cache
+c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.exe
+c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.pdb
+C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.Login.resources
+C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.Main.resources
+C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.Register.resources
