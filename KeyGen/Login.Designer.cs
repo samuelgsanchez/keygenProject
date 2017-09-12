@@ -33,14 +33,16 @@ namespace KeyGen
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btViewPasswd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btViewPasswd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@ namespace KeyGen
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 18);
+            this.label1.Location = new System.Drawing.Point(50, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(261, 19);
             this.label1.TabIndex = 1;
@@ -73,16 +75,7 @@ namespace KeyGen
             this.textBox1.MaxLength = 50;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(263, 25);
-            this.textBox1.TabIndex = 3;
-            // 
-            // btViewPasswd
-            // 
-            this.btViewPasswd.Location = new System.Drawing.Point(284, 143);
-            this.btViewPasswd.Name = "btViewPasswd";
-            this.btViewPasswd.Size = new System.Drawing.Size(42, 25);
-            this.btViewPasswd.TabIndex = 4;
-            this.btViewPasswd.UseVisualStyleBackColor = true;
-            this.btViewPasswd.Click += new System.EventHandler(this.btViewPasswd_Click);
+            this.textBox1.TabIndex = 1;
             // 
             // label3
             // 
@@ -101,7 +94,7 @@ namespace KeyGen
             this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(263, 25);
-            this.textBox2.TabIndex = 6;
+            this.textBox2.TabIndex = 2;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -112,7 +105,7 @@ namespace KeyGen
             this.linkLabel1.Location = new System.Drawing.Point(12, 171);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(151, 14);
-            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado tu contraseña?";
             // 
@@ -123,7 +116,7 @@ namespace KeyGen
             this.linkLabel2.Location = new System.Drawing.Point(251, 264);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(75, 17);
-            this.linkLabel2.TabIndex = 12;
+            this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Regístrate";
             // 
@@ -133,9 +126,10 @@ namespace KeyGen
             this.btAceptar.Location = new System.Drawing.Point(15, 213);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btAceptar.TabIndex = 13;
+            this.btAceptar.TabIndex = 5;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
+            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // btCancelar
             // 
@@ -143,9 +137,28 @@ namespace KeyGen
             this.btCancelar.Location = new System.Drawing.Point(96, 213);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 14;
+            this.btCancelar.TabIndex = 6;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::KeyGen.Properties.Resources.login;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btViewPasswd
+            // 
+            this.btViewPasswd.Image = global::KeyGen.Properties.Resources.eye;
+            this.btViewPasswd.Location = new System.Drawing.Point(284, 143);
+            this.btViewPasswd.Name = "btViewPasswd";
+            this.btViewPasswd.Size = new System.Drawing.Size(42, 25);
+            this.btViewPasswd.TabIndex = 3;
+            this.btViewPasswd.UseVisualStyleBackColor = true;
+            this.btViewPasswd.Click += new System.EventHandler(this.btViewPasswd_Click);
             // 
             // pictureBox1
             // 
@@ -163,6 +176,7 @@ namespace KeyGen
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 290);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.linkLabel2);
@@ -177,6 +191,7 @@ namespace KeyGen
             this.Name = "Login";
             this.Text = "Inciar sesión";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -196,5 +211,6 @@ namespace KeyGen
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

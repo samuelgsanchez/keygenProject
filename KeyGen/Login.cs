@@ -14,6 +14,7 @@ namespace KeyGen
     public partial class Login : Form
     {
         private bool btViewPasswdClicked = false;
+        private DBConnect db;
 
         public Login()
         {
@@ -22,8 +23,12 @@ namespace KeyGen
 
         private void Login_Load(object sender, EventArgs e)
         {
+            db = new DBConnect();
+
             label1.Parent = pictureBox1;
+            pictureBox2.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
+            pictureBox2.BackColor = Color.Transparent;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -42,6 +47,40 @@ namespace KeyGen
             else
             {
                 textBox2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var mail = new System.Net.Mail.MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private void btAceptar_Click(object sender, EventArgs e)
+        {
+            if(IsValidEmail(textBox1.Text))
+            {
+                if(db.AuthenticateLogin(textBox1.Text, textBox2.Text) == 1)
+                {
+                    MessageBox.Show("El inicio de sesión es correcto");
+                }
+                else
+                {
+                    MessageBox.Show("El usuario o contraseña no son correctos", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox1.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("La dirección de email no es válida", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Focus();
             }
         }
     }
