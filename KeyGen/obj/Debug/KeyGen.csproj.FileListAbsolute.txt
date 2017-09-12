@@ -9,3 +9,5 @@ c:\users\usuario\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\K
 C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.Login.resources
 C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.Main.resources
 C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.Register.resources
+C:\Users\USUARIO\Documents\Visual Studio 2017\Projects\KeyGen\KeyGen\bin\Debug\MySql.Data.dll
+C:\Users\USUARIO\Documents\Visual Studio 2017\Projects\KeyGen\KeyGen\bin\Debug\MySql.Data.xml

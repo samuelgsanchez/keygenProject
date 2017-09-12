@@ -94,5 +94,18 @@ namespace KeyGen
 
             return res;
         }
+
+        public void InsertRegister(string email, string password)
+        {
+            string query = "INSERT INTO users(email, password) VALUES('" + email + "',AES_ENCRYPT('" + password + "','samplekey'))";
+
+            if(this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, cn);
+
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+        }
     }
 }
