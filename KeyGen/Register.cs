@@ -14,6 +14,8 @@ namespace KeyGen
     public partial class Register : Form
     {
 
+        DBConnect db;
+
         private bool btViewPasswdClicked = false;
 
         public Register()
@@ -26,6 +28,10 @@ namespace KeyGen
         {
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
+            pictureBox2.Parent = pictureBox1;
+            pictureBox2.BackColor = Color.Transparent;
+            db = new DBConnect();
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -67,5 +73,49 @@ namespace KeyGen
                 textBox3.UseSystemPasswordChar = true;
             }
         }
+
+        private void btRegistrar_Click(object sender, EventArgs e)
+        {
+            bool email = false, passwords = false, empty = false;
+
+            if (IsValidEmail(textBox1.Text)) { email = true; }
+            if (CheckPasswords(textBox2.Text, textBox3.Text)) { passwords = true;  }
+            if(!(textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" || textBox3.Text.Trim() == "")) { empty = true; }
+
+            if(!email) { errorProvider1.SetError(textBox1, "La dirección de correo electrónico no es válida"); } else { errorProvider1.Clear(); }
+            if(!passwords) { label6.Text = "Las contraseñas no coinciden"; } else { label6.Text = ""; }
+            if(!empty) { MessageBox.Show("No puedes dejar ningún campo vacío", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+
+
+            if(email && passwords && empty)
+            {
+                int res = db.InsertRegister(textBox1.Text, textBox2.Text);
+                if (res == 1)
+                {
+                    MessageBox.Show("Usuario registrado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            
+        }
+
+        private bool CheckPasswords(string pwd1, string pwd2)
+        {
+            if (pwd1.Equals(pwd2)) { return true; } else { return false; }
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var mail = new System.Net.Mail.MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

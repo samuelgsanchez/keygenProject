@@ -83,6 +83,16 @@ namespace KeyGen.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap singup {
+            get {
+                object obj = ResourceManager.GetObject("singup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap slide3_bg {
             get {
                 object obj = ResourceManager.GetObject("slide3-bg", resourceCulture);

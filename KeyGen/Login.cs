@@ -79,7 +79,7 @@ namespace KeyGen
             }
             else
             {
-                MessageBox.Show("La dirección de email no es válida", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La dirección de correo electrónico no es válida", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox1.Focus();
             }
         }

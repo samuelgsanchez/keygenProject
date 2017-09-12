@@ -73,7 +73,7 @@ namespace KeyGen
         {
             int res = 0;
 
-            string query = "SELECT * FROM users WHERE email = '" + email + "' and password = '" + password + "'";
+            string query = "SELECT * FROM users WHERE email = '" + email + "' and password = AES_ENCRYPT('" + password + "','samplekey')";
 
             if(this.OpenConnection())
             {
@@ -95,17 +95,22 @@ namespace KeyGen
             return res;
         }
 
-        public void InsertRegister(string email, string password)
+        public int InsertRegister(string email, string password)
         {
+            int res = 0;
+
             string query = "INSERT INTO users(email, password) VALUES('" + email + "',AES_ENCRYPT('" + password + "','samplekey'))";
 
             if(this.OpenConnection())
             {
                 MySqlCommand cmd = new MySqlCommand(query, cn);
 
-                cmd.ExecuteNonQuery();
+                res = cmd.ExecuteNonQuery();
+
                 this.CloseConnection();
             }
+
+            return res;
         }
     }
 }
