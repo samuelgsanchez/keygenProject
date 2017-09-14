@@ -59,7 +59,7 @@ namespace KeyGen
             this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(263, 25);
-            this.textBox2.TabIndex = 21;
+            this.textBox2.TabIndex = 2;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -80,7 +80,7 @@ namespace KeyGen
             this.textBox1.MaxLength = 50;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(263, 25);
-            this.textBox1.TabIndex = 18;
+            this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -150,7 +150,7 @@ namespace KeyGen
             this.textBox3.MaxLength = 50;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(263, 25);
-            this.textBox3.TabIndex = 24;
+            this.textBox3.TabIndex = 3;
             this.textBox3.UseSystemPasswordChar = true;
             // 
             // btRegistrar
@@ -159,7 +159,7 @@ namespace KeyGen
             this.btRegistrar.Location = new System.Drawing.Point(15, 293);
             this.btRegistrar.Name = "btRegistrar";
             this.btRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btRegistrar.TabIndex = 25;
+            this.btRegistrar.TabIndex = 4;
             this.btRegistrar.Text = "Registrar";
             this.btRegistrar.UseVisualStyleBackColor = true;
             this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
@@ -170,7 +170,7 @@ namespace KeyGen
             this.btCancelar.Location = new System.Drawing.Point(96, 293);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 26;
+            this.btCancelar.TabIndex = 5;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             // 
@@ -204,7 +204,7 @@ namespace KeyGen
             this.btViewPasswd.Location = new System.Drawing.Point(284, 143);
             this.btViewPasswd.Name = "btViewPasswd";
             this.btViewPasswd.Size = new System.Drawing.Size(42, 25);
-            this.btViewPasswd.TabIndex = 19;
+            this.btViewPasswd.TabIndex = 6;
             this.btViewPasswd.UseVisualStyleBackColor = true;
             this.btViewPasswd.Click += new System.EventHandler(this.btViewPasswd_Click);
             // 

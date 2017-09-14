@@ -94,6 +94,11 @@ namespace KeyGen
                 {
                     MessageBox.Show("Usuario registrado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                else
+                {
+                    MessageBox.Show("El usuario no se ha podido registrar. Póngase en contacto " +
+                        "con el administrador del sistema si el problema persiste.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             

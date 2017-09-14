@@ -15,6 +15,8 @@ namespace KeyGen
         public Main()
         {
             InitializeComponent();
+            treeView1.ExpandAll();
+
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
