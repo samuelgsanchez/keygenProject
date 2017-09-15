@@ -122,5 +122,17 @@ namespace KeyGen
             }
         }
 
+        private void Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void Register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            Login lg = new Login();
+            lg.ShowDialog();
+            this.Close();
+        }
     }
 }

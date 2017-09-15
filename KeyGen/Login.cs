@@ -83,5 +83,19 @@ namespace KeyGen
                 textBox1.Focus();
             }
         }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Register rg = new Register();
+            rg.ShowDialog();
+            this.Close();
+            
+        }
     }
 }

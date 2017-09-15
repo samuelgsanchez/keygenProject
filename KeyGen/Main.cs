@@ -31,7 +31,18 @@ namespace KeyGen
 
         private void abrirSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            OpenFormLogin();
+        }
+
+        private void OpenFormLogin()
+        {
+            Login lg = new Login();
+            lg.ShowDialog();
+        }
+
+        private void nuevaSesion_Click(object sender, EventArgs e)
+        {
+            OpenFormLogin();
         }
     }
 }
