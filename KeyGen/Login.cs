@@ -8,13 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace KeyGen
 {
     public partial class Login : Form
     {
         private bool btViewPasswdClicked = false;
+        private int correctValue = 0;
+        private string user;
         private DBConnect db;
+        Thread th;
 
         public Login()
         {
@@ -29,6 +33,7 @@ namespace KeyGen
             pictureBox2.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
             pictureBox2.BackColor = Color.Transparent;
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -50,38 +55,29 @@ namespace KeyGen
             }
         }
 
-        private bool IsValidEmail(string email)
-        {
-            try
-            {
-                var mail = new System.Net.Mail.MailAddress(email);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if(IsValidEmail(textBox1.Text))
+
+            correctValue = db.AuthenticateLogin(textBox1.Text, textBox2.Text);
+
+            if (correctValue == 1)
             {
-                if(db.AuthenticateLogin(textBox1.Text, textBox2.Text) == 1)
-                {
-                    MessageBox.Show("El inicio de sesión es correcto");
-                }
-                else
-                {
-                    MessageBox.Show("El usuario o contraseña no son correctos", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox1.Focus();
-                }
+                user = textBox1.Text;
+                // Abre el formulario principal con los datos del usuario
+                this.Dispose();
+                th = new Thread(openMainFormUser);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+                
             }
             else
             {
-                MessageBox.Show("La dirección de correo electrónico no es válida", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El usuario o contraseña no son correctos", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Clear();
+                textBox2.Clear();
                 textBox1.Focus();
             }
+
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
@@ -91,11 +87,29 @@ namespace KeyGen
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
             Register rg = new Register();
             rg.ShowDialog();
-            this.Close();
             
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Abre el formulario principal sin haber hecho el login
+            th = new Thread(openMainForm);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        // Abre el formulario principal con los datos del usuario
+        private void openMainFormUser()
+        {
+            Application.Run(new Main(correctValue, user));
+        }
+
+        // Abre el formulario principal sin haber hecho el login
+        private void openMainForm()
+        {
+            Application.Run(new Main());
         }
     }
 }

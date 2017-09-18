@@ -88,9 +88,9 @@ namespace KeyGen
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 16);
+            this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Correo electrónico:";
+            this.label2.Text = "Usuario:";
             // 
             // label1
             // 
@@ -173,6 +173,7 @@ namespace KeyGen
             this.btCancelar.TabIndex = 5;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // errorProvider1
             // 
@@ -243,6 +244,7 @@ namespace KeyGen
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Register_FormClosed);

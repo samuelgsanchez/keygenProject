@@ -76,28 +76,23 @@ namespace KeyGen
 
         private void btRegistrar_Click(object sender, EventArgs e)
         {
-            bool email = false, passwords = false, empty = false;
+            bool user = false, passwords = false, empty = false;
 
-            if (IsValidEmail(textBox1.Text)) { email = true; }
+            if(textBox1.TextLength < 6) { errorProvider1.SetError(textBox1, "El usuario debe tener más de 6 caracteres"); } else { errorProvider1.Clear(); user = true; }
             if (CheckPasswords(textBox2.Text, textBox3.Text)) { passwords = true;  }
             if(!(textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" || textBox3.Text.Trim() == "")) { empty = true; }
 
-            if(!email) { errorProvider1.SetError(textBox1, "La dirección de correo electrónico no es válida"); } else { errorProvider1.Clear(); }
             if(!passwords) { label6.Text = "Las contraseñas no coinciden"; } else { label6.Text = ""; }
             if(!empty) { MessageBox.Show("No puedes dejar ningún campo vacío", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
 
-            if(email && passwords && empty)
+            if(user && passwords && empty)
             {
                 int res = db.InsertRegister(textBox1.Text, textBox2.Text);
                 if (res == 1)
                 {
                     MessageBox.Show("Usuario registrado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("El usuario no se ha podido registrar. Póngase en contacto " +
-                        "con el administrador del sistema si el problema persiste.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
                 }
             }
 
@@ -109,19 +104,6 @@ namespace KeyGen
             if (pwd1.Equals(pwd2)) { return true; } else { return false; }
         }
 
-        private bool IsValidEmail(string email)
-        {
-            try
-            {
-                var mail = new System.Net.Mail.MailAddress(email);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
         private void Register_FormClosing(object sender, FormClosingEventArgs e)
         {
             
@@ -129,9 +111,11 @@ namespace KeyGen
 
         private void Register_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            Login lg = new Login();
-            lg.ShowDialog();
+
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

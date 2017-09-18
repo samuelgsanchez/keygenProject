@@ -69,11 +69,11 @@ namespace KeyGen
             }
         }
 
-        public int AuthenticateLogin(string email, string password)
+        public int AuthenticateLogin(string user, string password)
         {
             int res = 0;
 
-            string query = "SELECT * FROM users WHERE email = '" + email + "' and password = AES_ENCRYPT('" + password + "','samplekey')";
+            string query = "SELECT * FROM users WHERE user = '" + user + "' and password = AES_ENCRYPT('" + password + "','samplekey')";
 
             if(this.OpenConnection())
             {
@@ -95,17 +95,30 @@ namespace KeyGen
             return res;
         }
 
-        public int InsertRegister(string email, string password)
+        public int InsertRegister(string user, string password)
         {
             int res = 0;
 
-            string query = "INSERT INTO users(email, password) VALUES('" + email + "',AES_ENCRYPT('" + password + "','samplekey'))";
+            string query = "INSERT INTO users(user, password) VALUES('" + user + "',AES_ENCRYPT('" + password + "','samplekey'))";
 
             if(this.OpenConnection())
             {
                 MySqlCommand cmd = new MySqlCommand(query, cn);
 
-                res = cmd.ExecuteNonQuery();
+                try
+                {
+                    res = cmd.ExecuteNonQuery();
+                }
+                catch(MySqlException ex)
+                {
+                    MessageBox.Show("Este nombre de usuario ya existe.\n" + ex.Message, "Usuario duplicado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El usuario no se ha podido registrar. Póngase en contacto " +
+                        "con el administrador del sistema si el problema persiste.\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
 
                 this.CloseConnection();
             }
