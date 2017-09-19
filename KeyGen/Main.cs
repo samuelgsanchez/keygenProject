@@ -69,16 +69,6 @@ namespace KeyGen
             OpenFormLogin();
         }
 
-        private void Main_Activated(object sender, EventArgs e)
-        {
-            if (LoginValue == 1)
-            {
-                treeView1.Visible = true;
-                
-            }
-            
-        }
-
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -86,12 +76,70 @@ namespace KeyGen
 
         private void Main_Load(object sender, EventArgs e)
         {
-            
+            if (LoginValue == 1)
+            {
+                ActiveControls();
+            }
         }
 
-        private void Main_Enter(object sender, EventArgs e)
+        private void ActiveControls()
         {
-            
+            treeView1.Visible = true;
+            dataGridView1.Visible = true;
+
+            // Controles del toolStrip
+            nuevaSesion.Enabled = false;
+            cerrarSesion.Enabled = true;
+            insertarEntrada.Enabled = true;
+            buscar.Enabled = true;
+            bloquearVentana.Enabled = true;
+            txBuscar.Enabled = true;
+
+            // Controles del menuStrip
+            abrirSesiónToolStripMenuItem.Enabled = false;
+            cerrarSesiónToolStripMenuItem.Enabled = true;
+            guardarToolStripMenuItem.Enabled = true;
+            guardarComoToolStripMenuItem.Enabled = true;
+            cambiarContraseñaToolStripMenuItem.Enabled = true;
+            imprimirToolStripMenuItem.Enabled = true;
+            imprimirToolStripMenuItem1.Enabled = true;
+            bloquearEspacioDeTrabajoToolStripMenuItem.Enabled = true;
+            añadirGrupoToolStripMenuItem.Enabled = true;
+            añadirSubgrupoToolStripMenuItem.Enabled = true;
+            editarGrupoToolStripMenuItem.Enabled = true;
+            eliminarGrupoToolStripMenuItem.Enabled = true;
+            añadirEntradaToolStripMenuItem.Enabled = true;
+            buscarEnLaBaseDeDatosToolStripMenuItem.Enabled = true;
+            buscarEnEsteGrupoToolStripMenuItem.Enabled = true;
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cerrarSesion_Click(object sender, EventArgs e)
+        {
+            cerrarSesionForm();
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarSesionForm();
+        }
+
+        private void cerrarSesionForm()
+        {
+
+            DialogResult dialogResult = MessageBox.Show("¿Estás seguro que quieres cerrar sesión?", "Cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(dialogResult == DialogResult.Yes)
+            {
+                LoginValue = 0;
+                LoginUser = "";
+                Application.Restart();
+            }
         }
     }
 }
