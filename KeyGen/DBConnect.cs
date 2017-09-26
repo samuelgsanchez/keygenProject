@@ -124,6 +124,41 @@ namespace KeyGen
             }
 
             return res;
+
+        }
+
+        public void GenerateCategories()
+        {
+            string queryId = "SELECT LAST_INSERT_ID()";
+
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(queryId, cn);
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    int id_user = dr.GetInt32(0);
+
+                    this.CloseConnection();
+
+                    string queryProcedure = "CALL insert_categories(" + id_user + ")";
+
+                    MySqlCommand cmd2 = new MySqlCommand(queryProcedure, cn);
+
+                    if(this.OpenConnection())
+                    {
+                        cmd2.ExecuteNonQuery();
+                        this.CloseConnection();
+                    }
+                    
+                }
+            }
+        }
+
+        public void ObtainCategories(int user_account)
+        {
+            string query = "SELECT * FROM categories WHERE user_account = " + user_account;
         }
     }
 }

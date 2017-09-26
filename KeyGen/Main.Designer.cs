@@ -28,19 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Windows", 1, 1);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Red", 2, 2);
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Internet", 3, 3);
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Correo", 4, 4);
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Banco", 5, 5);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("General", 0, 0, new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5});
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,9 +104,9 @@
             this.copiarUsuario = new System.Windows.Forms.ToolStripButton();
             this.copiarContrasena = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
-            this.bloquearVentana = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
             this.buscar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.bloquearVentana = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.ayuda = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
@@ -130,7 +117,6 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.iconsTreeView = new System.Windows.Forms.ImageList(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -792,21 +778,6 @@
             this.toolStripSeparator15.Name = "toolStripSeparator15";
             this.toolStripSeparator15.Size = new System.Drawing.Size(6, 25);
             // 
-            // bloquearVentana
-            // 
-            this.bloquearVentana.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bloquearVentana.Enabled = false;
-            this.bloquearVentana.Image = global::KeyGen.Properties.Resources.security_system;
-            this.bloquearVentana.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bloquearVentana.Name = "bloquearVentana";
-            this.bloquearVentana.Size = new System.Drawing.Size(23, 22);
-            this.bloquearVentana.Text = "Bloquear área de tabajo";
-            // 
-            // toolStripSeparator16
-            // 
-            this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
-            // 
             // buscar
             // 
             this.buscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -816,6 +787,21 @@
             this.buscar.Name = "buscar";
             this.buscar.Size = new System.Drawing.Size(23, 22);
             this.buscar.Text = "Buscar";
+            // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bloquearVentana
+            // 
+            this.bloquearVentana.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bloquearVentana.Enabled = false;
+            this.bloquearVentana.Image = global::KeyGen.Properties.Resources.security_system;
+            this.bloquearVentana.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bloquearVentana.Name = "bloquearVentana";
+            this.bloquearVentana.Size = new System.Drawing.Size(23, 22);
+            this.bloquearVentana.Text = "Bloquear área de tabajo";
             // 
             // toolStripSeparator17
             // 
@@ -905,53 +891,11 @@
             this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeView1.ImageIndex = 0;
-            this.treeView1.ImageList = this.iconsTreeView;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode1.ImageIndex = 1;
-            treeNode1.Name = "windows";
-            treeNode1.SelectedImageIndex = 1;
-            treeNode1.Text = "Windows";
-            treeNode2.ImageIndex = 2;
-            treeNode2.Name = "red";
-            treeNode2.SelectedImageIndex = 2;
-            treeNode2.Text = "Red";
-            treeNode3.ImageIndex = 3;
-            treeNode3.Name = "internet";
-            treeNode3.SelectedImageIndex = 3;
-            treeNode3.Text = "Internet";
-            treeNode4.ImageIndex = 4;
-            treeNode4.Name = "correo";
-            treeNode4.SelectedImageIndex = 4;
-            treeNode4.Text = "Correo";
-            treeNode5.ImageIndex = 5;
-            treeNode5.Name = "banco";
-            treeNode5.SelectedImageIndex = 5;
-            treeNode5.Text = "Banco";
-            treeNode6.ImageIndex = 0;
-            treeNode6.Name = "general";
-            treeNode6.NodeFont = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode6.SelectedImageIndex = 0;
-            treeNode6.Text = "General";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6});
-            this.treeView1.SelectedImageIndex = 0;
             this.treeView1.Size = new System.Drawing.Size(194, 443);
             this.treeView1.TabIndex = 0;
             this.treeView1.Visible = false;
-            // 
-            // iconsTreeView
-            // 
-            this.iconsTreeView.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconsTreeView.ImageStream")));
-            this.iconsTreeView.TransparentColor = System.Drawing.Color.Transparent;
-            this.iconsTreeView.Images.SetKeyName(0, "close-folder.png");
-            this.iconsTreeView.Images.SetKeyName(1, "window.png");
-            this.iconsTreeView.Images.SetKeyName(2, "server.png");
-            this.iconsTreeView.Images.SetKeyName(3, "internet.png");
-            this.iconsTreeView.Images.SetKeyName(4, "email.png");
-            this.iconsTreeView.Images.SetKeyName(5, "ancient.png");
-            this.iconsTreeView.Images.SetKeyName(6, "open-folder.png");
             // 
             // dataGridView1
             // 
@@ -1119,7 +1063,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ImageList iconsTreeView;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
         private System.Windows.Forms.ToolStripButton bloquearVentana;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;

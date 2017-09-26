@@ -92,6 +92,7 @@ namespace KeyGen
                 if (res == 1)
                 {
                     MessageBox.Show("Usuario registrado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    db.GenerateCategories();
                     this.Close();
                 }
             }
