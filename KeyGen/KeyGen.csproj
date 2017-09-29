@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categories.cs" />
     <Compile Include="DBConnect.cs" />
+    <Compile Include="Icons.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -127,6 +127,28 @@ namespace KeyGen
 
         }
 
+        public int ObtainIdAccount(string user_account)
+        {
+            int idAccount = 0;
+            string query = "SELECT id_user FROM users WHERE user = '" + user_account + "'";
+
+            if(this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, cn);
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                if(dr.Read())
+                {
+                    idAccount = dr.GetInt32(0);
+                    
+                }
+
+                this.CloseConnection();
+            }
+
+            return idAccount;
+        }
+
         public void GenerateCategories()
         {
             string queryId = "SELECT LAST_INSERT_ID()";
@@ -156,9 +178,37 @@ namespace KeyGen
             }
         }
 
-        public void ObtainCategories(int user_account)
+        public List<Categories> ObtainCategories(int user_account)
         {
+            List<Categories> listCategories = new List<Categories>();
             string query = "SELECT * FROM categories WHERE user_account = " + user_account;
+
+            if(this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, cn);
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                while(dr.Read())
+                {
+                    Categories cat = new Categories();
+                    cat.Id_group = (int)dr["id_group"];
+                    cat.Name = (string)dr["name"];
+                    cat.Icon = (byte[])dr["icon"];
+                    cat.Tree_level = (string)dr["tree_level"];
+                    cat.User_account = (int)dr["user_account"];
+
+                    listCategories.Add(cat);
+                }
+
+                this.CloseConnection();
+            }
+
+            return listCategories;
+        }
+
+        public List<Icons> ObtainIcons()
+        {
+            return null;
         }
     }
 }
