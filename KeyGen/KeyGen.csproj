@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addGroup.Designer.cs">
+      <DependentUpon>addGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Categories.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Icons.cs" />
@@ -77,6 +83,9 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addGroup.resx">
+      <DependentUpon>addGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-folder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

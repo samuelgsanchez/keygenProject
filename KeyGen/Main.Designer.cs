@@ -31,10 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarComoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +39,6 @@
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.bloquearEspacioDeTrabajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,14 +47,9 @@
             this.editarGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.copiarNombreDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirURLsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.añadirEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarVerEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.duplicarEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.borrarEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarTodosLosSeleccionadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seleccionarTodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
@@ -94,22 +85,11 @@
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.acercaDeKeyGenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.nuevaSesion = new System.Windows.Forms.ToolStripButton();
-            this.cerrarSesion = new System.Windows.Forms.ToolStripButton();
-            this.guardarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.insertarEntrada = new System.Windows.Forms.ToolStripButton();
-            this.modificarEntrada = new System.Windows.Forms.ToolStripButton();
-            this.eliminarEntrada = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.copiarUsuario = new System.Windows.Forms.ToolStripButton();
-            this.copiarContrasena = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
-            this.buscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.bloquearVentana = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
-            this.ayuda = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
             this.txBuscar = new System.Windows.Forms.ToolStripComboBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -118,13 +98,56 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.treeImageList = new System.Windows.Forms.ImageList(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.url = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.treeViewContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmAddGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmAddSubgroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmEditGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmDeleteGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmReorganize = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmSearchInGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmPrintGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmExportGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.moverElGrupoHastaElTopeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moverElGrupoAlFinalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
+            this.moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
+            this.ordenarListaDeGruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.archivoTXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaSesion = new System.Windows.Forms.ToolStripButton();
+            this.cerrarSesion = new System.Windows.Forms.ToolStripButton();
+            this.guardarToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.insertarEntrada = new System.Windows.Forms.ToolStripButton();
+            this.modificarEntrada = new System.Windows.Forms.ToolStripButton();
+            this.eliminarEntrada = new System.Windows.Forms.ToolStripButton();
+            this.copiarUsuario = new System.Windows.Forms.ToolStripButton();
+            this.copiarContrasena = new System.Windows.Forms.ToolStripButton();
+            this.buscar = new System.Windows.Forms.ToolStripButton();
+            this.bloquearVentana = new System.Windows.Forms.ToolStripButton();
+            this.ayuda = new System.Windows.Forms.ToolStripButton();
+            this.abrirSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bloquearEspacioDeTrabajoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copiarNombreDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarVerEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrarEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -133,6 +156,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.treeViewContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -170,38 +194,10 @@
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
-            // abrirSesiónToolStripMenuItem
-            // 
-            this.abrirSesiónToolStripMenuItem.Image = global::KeyGen.Properties.Resources.login1;
-            this.abrirSesiónToolStripMenuItem.Name = "abrirSesiónToolStripMenuItem";
-            this.abrirSesiónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.abrirSesiónToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.abrirSesiónToolStripMenuItem.Text = "Abrir sesión...";
-            this.abrirSesiónToolStripMenuItem.Click += new System.EventHandler(this.abrirSesiónToolStripMenuItem_Click);
-            // 
-            // cerrarSesiónToolStripMenuItem
-            // 
-            this.cerrarSesiónToolStripMenuItem.Enabled = false;
-            this.cerrarSesiónToolStripMenuItem.Image = global::KeyGen.Properties.Resources.logout;
-            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
-            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(257, 6);
-            // 
-            // guardarToolStripMenuItem
-            // 
-            this.guardarToolStripMenuItem.Enabled = false;
-            this.guardarToolStripMenuItem.Image = global::KeyGen.Properties.Resources.save;
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // guardarComoToolStripMenuItem
             // 
@@ -247,15 +243,6 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(257, 6);
             // 
-            // bloquearEspacioDeTrabajoToolStripMenuItem
-            // 
-            this.bloquearEspacioDeTrabajoToolStripMenuItem.Enabled = false;
-            this.bloquearEspacioDeTrabajoToolStripMenuItem.Image = global::KeyGen.Properties.Resources.security_system;
-            this.bloquearEspacioDeTrabajoToolStripMenuItem.Name = "bloquearEspacioDeTrabajoToolStripMenuItem";
-            this.bloquearEspacioDeTrabajoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.bloquearEspacioDeTrabajoToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.bloquearEspacioDeTrabajoToolStripMenuItem.Text = "Bloquear espacio de trabajo";
-            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -298,6 +285,7 @@
             this.añadirGrupoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
             this.añadirGrupoToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
             this.añadirGrupoToolStripMenuItem.Text = "Añadir grupo...";
+            this.añadirGrupoToolStripMenuItem.Click += new System.EventHandler(this.añadirGrupoToolStripMenuItem_Click);
             // 
             // añadirSubgrupoToolStripMenuItem
             // 
@@ -330,24 +318,6 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(276, 6);
             // 
-            // copiarNombreDeUsuarioToolStripMenuItem
-            // 
-            this.copiarNombreDeUsuarioToolStripMenuItem.Enabled = false;
-            this.copiarNombreDeUsuarioToolStripMenuItem.Image = global::KeyGen.Properties.Resources.copy_user;
-            this.copiarNombreDeUsuarioToolStripMenuItem.Name = "copiarNombreDeUsuarioToolStripMenuItem";
-            this.copiarNombreDeUsuarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.copiarNombreDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.copiarNombreDeUsuarioToolStripMenuItem.Text = "Copiar nombre de usuario";
-            // 
-            // copiarContraseñaToolStripMenuItem
-            // 
-            this.copiarContraseñaToolStripMenuItem.Enabled = false;
-            this.copiarContraseñaToolStripMenuItem.Image = global::KeyGen.Properties.Resources.copy_password2;
-            this.copiarContraseñaToolStripMenuItem.Name = "copiarContraseñaToolStripMenuItem";
-            this.copiarContraseñaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.copiarContraseñaToolStripMenuItem.Text = "Copiar contraseña";
-            // 
             // abrirURLsToolStripMenuItem
             // 
             this.abrirURLsToolStripMenuItem.Enabled = false;
@@ -361,24 +331,6 @@
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(276, 6);
             // 
-            // añadirEntradaToolStripMenuItem
-            // 
-            this.añadirEntradaToolStripMenuItem.Enabled = false;
-            this.añadirEntradaToolStripMenuItem.Image = global::KeyGen.Properties.Resources.add_key_icon;
-            this.añadirEntradaToolStripMenuItem.Name = "añadirEntradaToolStripMenuItem";
-            this.añadirEntradaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.añadirEntradaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.añadirEntradaToolStripMenuItem.Text = "Añadir entrada...";
-            // 
-            // editarVerEntradaToolStripMenuItem
-            // 
-            this.editarVerEntradaToolStripMenuItem.Enabled = false;
-            this.editarVerEntradaToolStripMenuItem.Image = global::KeyGen.Properties.Resources.modify_key_icon;
-            this.editarVerEntradaToolStripMenuItem.Name = "editarVerEntradaToolStripMenuItem";
-            this.editarVerEntradaToolStripMenuItem.ShortcutKeyDisplayString = "Intro";
-            this.editarVerEntradaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.editarVerEntradaToolStripMenuItem.Text = "Editar/Ver entrada...";
-            // 
             // duplicarEntradaToolStripMenuItem
             // 
             this.duplicarEntradaToolStripMenuItem.Enabled = false;
@@ -386,15 +338,6 @@
             this.duplicarEntradaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
             this.duplicarEntradaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
             this.duplicarEntradaToolStripMenuItem.Text = "Duplicar entrada";
-            // 
-            // borrarEntradaToolStripMenuItem
-            // 
-            this.borrarEntradaToolStripMenuItem.Enabled = false;
-            this.borrarEntradaToolStripMenuItem.Image = global::KeyGen.Properties.Resources.remove_key_icon;
-            this.borrarEntradaToolStripMenuItem.Name = "borrarEntradaToolStripMenuItem";
-            this.borrarEntradaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.borrarEntradaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.borrarEntradaToolStripMenuItem.Text = "Borrar entrada";
             // 
             // modificarTodosLosSeleccionadosToolStripMenuItem
             // 
@@ -684,140 +627,30 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // nuevaSesion
-            // 
-            this.nuevaSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.nuevaSesion.Image = global::KeyGen.Properties.Resources.login1;
-            this.nuevaSesion.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.nuevaSesion.Name = "nuevaSesion";
-            this.nuevaSesion.Size = new System.Drawing.Size(23, 22);
-            this.nuevaSesion.Text = "Iniciar Sesión";
-            this.nuevaSesion.Click += new System.EventHandler(this.nuevaSesion_Click);
-            // 
-            // cerrarSesion
-            // 
-            this.cerrarSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cerrarSesion.Enabled = false;
-            this.cerrarSesion.Image = global::KeyGen.Properties.Resources.logout;
-            this.cerrarSesion.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cerrarSesion.Name = "cerrarSesion";
-            this.cerrarSesion.Size = new System.Drawing.Size(23, 22);
-            this.cerrarSesion.Text = "&Cerrar sesión";
-            this.cerrarSesion.Click += new System.EventHandler(this.cerrarSesion_Click);
-            // 
-            // guardarToolStripButton
-            // 
-            this.guardarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.guardarToolStripButton.Enabled = false;
-            this.guardarToolStripButton.Image = global::KeyGen.Properties.Resources.save;
-            this.guardarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.guardarToolStripButton.Name = "guardarToolStripButton";
-            this.guardarToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.guardarToolStripButton.Text = "&Guardar";
-            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // insertarEntrada
-            // 
-            this.insertarEntrada.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.insertarEntrada.Enabled = false;
-            this.insertarEntrada.Image = global::KeyGen.Properties.Resources.add_key_icon;
-            this.insertarEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.insertarEntrada.Name = "insertarEntrada";
-            this.insertarEntrada.Size = new System.Drawing.Size(23, 22);
-            this.insertarEntrada.Text = "&Insertar Entrada";
-            // 
-            // modificarEntrada
-            // 
-            this.modificarEntrada.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.modificarEntrada.Enabled = false;
-            this.modificarEntrada.Image = global::KeyGen.Properties.Resources.modify_key_icon;
-            this.modificarEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.modificarEntrada.Name = "modificarEntrada";
-            this.modificarEntrada.Size = new System.Drawing.Size(23, 22);
-            this.modificarEntrada.Text = "&Modificar entrada";
-            // 
-            // eliminarEntrada
-            // 
-            this.eliminarEntrada.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.eliminarEntrada.Enabled = false;
-            this.eliminarEntrada.Image = global::KeyGen.Properties.Resources.remove_key_icon;
-            this.eliminarEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.eliminarEntrada.Name = "eliminarEntrada";
-            this.eliminarEntrada.Size = new System.Drawing.Size(23, 22);
-            this.eliminarEntrada.Text = "&Eliminar entrada";
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
             this.toolStripSeparator14.Size = new System.Drawing.Size(6, 25);
             // 
-            // copiarUsuario
-            // 
-            this.copiarUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copiarUsuario.Enabled = false;
-            this.copiarUsuario.Image = global::KeyGen.Properties.Resources.copy_user;
-            this.copiarUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.copiarUsuario.Name = "copiarUsuario";
-            this.copiarUsuario.Size = new System.Drawing.Size(23, 22);
-            this.copiarUsuario.Text = "&Copiar usuario";
-            // 
-            // copiarContrasena
-            // 
-            this.copiarContrasena.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copiarContrasena.Enabled = false;
-            this.copiarContrasena.Image = global::KeyGen.Properties.Resources.copy_password2;
-            this.copiarContrasena.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.copiarContrasena.Name = "copiarContrasena";
-            this.copiarContrasena.Size = new System.Drawing.Size(23, 22);
-            this.copiarContrasena.Text = "&Copiar contraseña";
-            // 
             // toolStripSeparator15
             // 
             this.toolStripSeparator15.Name = "toolStripSeparator15";
             this.toolStripSeparator15.Size = new System.Drawing.Size(6, 25);
-            // 
-            // buscar
-            // 
-            this.buscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.buscar.Enabled = false;
-            this.buscar.Image = global::KeyGen.Properties.Resources.search;
-            this.buscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buscar.Name = "buscar";
-            this.buscar.Size = new System.Drawing.Size(23, 22);
-            this.buscar.Text = "Buscar";
             // 
             // toolStripSeparator16
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
             this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
             // 
-            // bloquearVentana
-            // 
-            this.bloquearVentana.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bloquearVentana.Enabled = false;
-            this.bloquearVentana.Image = global::KeyGen.Properties.Resources.security_system;
-            this.bloquearVentana.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bloquearVentana.Name = "bloquearVentana";
-            this.bloquearVentana.Size = new System.Drawing.Size(23, 22);
-            this.bloquearVentana.Text = "Bloquear área de tabajo";
-            // 
             // toolStripSeparator17
             // 
             this.toolStripSeparator17.Name = "toolStripSeparator17";
             this.toolStripSeparator17.Size = new System.Drawing.Size(6, 25);
-            // 
-            // ayuda
-            // 
-            this.ayuda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ayuda.Image = global::KeyGen.Properties.Resources.question;
-            this.ayuda.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ayuda.Name = "ayuda";
-            this.ayuda.Size = new System.Drawing.Size(23, 22);
-            this.ayuda.Text = "Ayuda";
             // 
             // toolStripSeparator18
             // 
@@ -870,7 +703,7 @@
             // splitContainer1
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer1.Cursor = System.Windows.Forms.Cursors.SizeWE;
+            this.splitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 49);
             this.splitContainer1.Name = "splitContainer1";
@@ -890,16 +723,25 @@
             // 
             // treeView1
             // 
+            this.treeView1.ContextMenuStrip = this.treeViewContext;
             this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Enabled = false;
             this.treeView1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.ImageIndex = 0;
-            this.treeView1.ImageList = this.imageList1;
+            this.treeView1.ImageList = this.treeImageList;
+            this.treeView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
             this.treeView1.Size = new System.Drawing.Size(194, 443);
             this.treeView1.TabIndex = 0;
+            // 
+            // treeImageList
+            // 
+            this.treeImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.treeImageList.ImageSize = new System.Drawing.Size(16, 16);
+            this.treeImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // dataGridView1
             // 
@@ -953,11 +795,363 @@
             this.comentarios.Name = "comentarios";
             this.comentarios.ReadOnly = true;
             // 
-            // imageList1
+            // treeViewContext
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.treeViewContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmAddGroup,
+            this.cmAddSubgroup,
+            this.toolStripSeparator19,
+            this.cmEditGroup,
+            this.cmDeleteGroup,
+            this.toolStripSeparator20,
+            this.cmReorganize,
+            this.toolStripSeparator21,
+            this.cmSearchInGroup,
+            this.toolStripSeparator22,
+            this.cmPrintGroup,
+            this.cmExportGroup});
+            this.treeViewContext.Name = "treeViewContext";
+            this.treeViewContext.Size = new System.Drawing.Size(280, 226);
+            // 
+            // cmAddGroup
+            // 
+            this.cmAddGroup.Name = "cmAddGroup";
+            this.cmAddGroup.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.cmAddGroup.Size = new System.Drawing.Size(279, 22);
+            this.cmAddGroup.Text = "Añadir grupo...";
+            this.cmAddGroup.Click += new System.EventHandler(this.cmAddGroup_Click);
+            // 
+            // cmAddSubgroup
+            // 
+            this.cmAddSubgroup.Name = "cmAddSubgroup";
+            this.cmAddSubgroup.Size = new System.Drawing.Size(279, 22);
+            this.cmAddSubgroup.Text = "Añadir subgrupo...";
+            // 
+            // toolStripSeparator19
+            // 
+            this.toolStripSeparator19.Name = "toolStripSeparator19";
+            this.toolStripSeparator19.Size = new System.Drawing.Size(276, 6);
+            // 
+            // cmEditGroup
+            // 
+            this.cmEditGroup.Name = "cmEditGroup";
+            this.cmEditGroup.Size = new System.Drawing.Size(279, 22);
+            this.cmEditGroup.Text = "Editar grupo...";
+            // 
+            // cmDeleteGroup
+            // 
+            this.cmDeleteGroup.Name = "cmDeleteGroup";
+            this.cmDeleteGroup.Size = new System.Drawing.Size(279, 22);
+            this.cmDeleteGroup.Text = "Eliminar grupo...";
+            // 
+            // toolStripSeparator20
+            // 
+            this.toolStripSeparator20.Name = "toolStripSeparator20";
+            this.toolStripSeparator20.Size = new System.Drawing.Size(276, 6);
+            // 
+            // cmReorganize
+            // 
+            this.cmReorganize.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.moverElGrupoHastaElTopeToolStripMenuItem,
+            this.moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem,
+            this.moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem,
+            this.moverElGrupoAlFinalToolStripMenuItem,
+            this.toolStripSeparator23,
+            this.moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem,
+            this.moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem,
+            this.toolStripSeparator24,
+            this.ordenarListaDeGruposToolStripMenuItem});
+            this.cmReorganize.Name = "cmReorganize";
+            this.cmReorganize.Size = new System.Drawing.Size(279, 22);
+            this.cmReorganize.Text = "Reorganizar";
+            // 
+            // toolStripSeparator21
+            // 
+            this.toolStripSeparator21.Name = "toolStripSeparator21";
+            this.toolStripSeparator21.Size = new System.Drawing.Size(276, 6);
+            // 
+            // cmSearchInGroup
+            // 
+            this.cmSearchInGroup.Name = "cmSearchInGroup";
+            this.cmSearchInGroup.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
+            this.cmSearchInGroup.Size = new System.Drawing.Size(279, 22);
+            this.cmSearchInGroup.Text = "Buscar en este grupo...";
+            // 
+            // toolStripSeparator22
+            // 
+            this.toolStripSeparator22.Name = "toolStripSeparator22";
+            this.toolStripSeparator22.Size = new System.Drawing.Size(276, 6);
+            // 
+            // cmPrintGroup
+            // 
+            this.cmPrintGroup.Name = "cmPrintGroup";
+            this.cmPrintGroup.Size = new System.Drawing.Size(279, 22);
+            this.cmPrintGroup.Text = "Imprimir grupo...";
+            // 
+            // cmExportGroup
+            // 
+            this.cmExportGroup.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoTXTToolStripMenuItem});
+            this.cmExportGroup.Name = "cmExportGroup";
+            this.cmExportGroup.Size = new System.Drawing.Size(279, 22);
+            this.cmExportGroup.Text = "Exportar grupo";
+            // 
+            // moverElGrupoHastaElTopeToolStripMenuItem
+            // 
+            this.moverElGrupoHastaElTopeToolStripMenuItem.Name = "moverElGrupoHastaElTopeToolStripMenuItem";
+            this.moverElGrupoHastaElTopeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Home)));
+            this.moverElGrupoHastaElTopeToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
+            this.moverElGrupoHastaElTopeToolStripMenuItem.Text = "Mover el grupo hasta el tope";
+            // 
+            // moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem
+            // 
+            this.moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem.Name = "moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem";
+            this.moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Up)));
+            this.moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
+            this.moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem.Text = "Mover el grupo una posición hacia arriba";
+            // 
+            // moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem
+            // 
+            this.moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem.Name = "moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem";
+            this.moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Down)));
+            this.moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
+            this.moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem.Text = "Mover el grupo una posición hacia abajo";
+            // 
+            // moverElGrupoAlFinalToolStripMenuItem
+            // 
+            this.moverElGrupoAlFinalToolStripMenuItem.Name = "moverElGrupoAlFinalToolStripMenuItem";
+            this.moverElGrupoAlFinalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.End)));
+            this.moverElGrupoAlFinalToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
+            this.moverElGrupoAlFinalToolStripMenuItem.Text = "Mover el grupo al final";
+            // 
+            // toolStripSeparator23
+            // 
+            this.toolStripSeparator23.Name = "toolStripSeparator23";
+            this.toolStripSeparator23.Size = new System.Drawing.Size(347, 6);
+            // 
+            // moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem
+            // 
+            this.moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem.Name = "moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem";
+            this.moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Left)));
+            this.moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
+            this.moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem.Text = "Mover el grupo una posición a la izquierda";
+            // 
+            // moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem
+            // 
+            this.moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem.Name = "moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem";
+            this.moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Right)));
+            this.moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
+            this.moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem.Text = "Mover el grupo una posición a la derecha";
+            // 
+            // toolStripSeparator24
+            // 
+            this.toolStripSeparator24.Name = "toolStripSeparator24";
+            this.toolStripSeparator24.Size = new System.Drawing.Size(347, 6);
+            // 
+            // ordenarListaDeGruposToolStripMenuItem
+            // 
+            this.ordenarListaDeGruposToolStripMenuItem.Name = "ordenarListaDeGruposToolStripMenuItem";
+            this.ordenarListaDeGruposToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
+            this.ordenarListaDeGruposToolStripMenuItem.Text = "Ordenar lista de grupos";
+            // 
+            // archivoTXTToolStripMenuItem
+            // 
+            this.archivoTXTToolStripMenuItem.Name = "archivoTXTToolStripMenuItem";
+            this.archivoTXTToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.archivoTXTToolStripMenuItem.Text = "Archivo TXT...";
+            // 
+            // nuevaSesion
+            // 
+            this.nuevaSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.nuevaSesion.Image = global::KeyGen.Properties.Resources.login1;
+            this.nuevaSesion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.nuevaSesion.Name = "nuevaSesion";
+            this.nuevaSesion.Size = new System.Drawing.Size(23, 22);
+            this.nuevaSesion.Text = "Iniciar Sesión";
+            this.nuevaSesion.Click += new System.EventHandler(this.nuevaSesion_Click);
+            // 
+            // cerrarSesion
+            // 
+            this.cerrarSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cerrarSesion.Enabled = false;
+            this.cerrarSesion.Image = global::KeyGen.Properties.Resources.logout;
+            this.cerrarSesion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cerrarSesion.Name = "cerrarSesion";
+            this.cerrarSesion.Size = new System.Drawing.Size(23, 22);
+            this.cerrarSesion.Text = "&Cerrar sesión";
+            this.cerrarSesion.Click += new System.EventHandler(this.cerrarSesion_Click);
+            // 
+            // guardarToolStripButton
+            // 
+            this.guardarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.guardarToolStripButton.Enabled = false;
+            this.guardarToolStripButton.Image = global::KeyGen.Properties.Resources.save;
+            this.guardarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.guardarToolStripButton.Name = "guardarToolStripButton";
+            this.guardarToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.guardarToolStripButton.Text = "&Guardar";
+            // 
+            // insertarEntrada
+            // 
+            this.insertarEntrada.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.insertarEntrada.Enabled = false;
+            this.insertarEntrada.Image = global::KeyGen.Properties.Resources.add_key_icon;
+            this.insertarEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.insertarEntrada.Name = "insertarEntrada";
+            this.insertarEntrada.Size = new System.Drawing.Size(23, 22);
+            this.insertarEntrada.Text = "&Insertar Entrada";
+            // 
+            // modificarEntrada
+            // 
+            this.modificarEntrada.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.modificarEntrada.Enabled = false;
+            this.modificarEntrada.Image = global::KeyGen.Properties.Resources.modify_key_icon;
+            this.modificarEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.modificarEntrada.Name = "modificarEntrada";
+            this.modificarEntrada.Size = new System.Drawing.Size(23, 22);
+            this.modificarEntrada.Text = "&Modificar entrada";
+            // 
+            // eliminarEntrada
+            // 
+            this.eliminarEntrada.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.eliminarEntrada.Enabled = false;
+            this.eliminarEntrada.Image = global::KeyGen.Properties.Resources.remove_key_icon;
+            this.eliminarEntrada.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.eliminarEntrada.Name = "eliminarEntrada";
+            this.eliminarEntrada.Size = new System.Drawing.Size(23, 22);
+            this.eliminarEntrada.Text = "&Eliminar entrada";
+            // 
+            // copiarUsuario
+            // 
+            this.copiarUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.copiarUsuario.Enabled = false;
+            this.copiarUsuario.Image = global::KeyGen.Properties.Resources.copy_user;
+            this.copiarUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.copiarUsuario.Name = "copiarUsuario";
+            this.copiarUsuario.Size = new System.Drawing.Size(23, 22);
+            this.copiarUsuario.Text = "&Copiar usuario";
+            // 
+            // copiarContrasena
+            // 
+            this.copiarContrasena.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.copiarContrasena.Enabled = false;
+            this.copiarContrasena.Image = global::KeyGen.Properties.Resources.copy_password2;
+            this.copiarContrasena.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.copiarContrasena.Name = "copiarContrasena";
+            this.copiarContrasena.Size = new System.Drawing.Size(23, 22);
+            this.copiarContrasena.Text = "&Copiar contraseña";
+            // 
+            // buscar
+            // 
+            this.buscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.buscar.Enabled = false;
+            this.buscar.Image = global::KeyGen.Properties.Resources.search;
+            this.buscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.buscar.Name = "buscar";
+            this.buscar.Size = new System.Drawing.Size(23, 22);
+            this.buscar.Text = "Buscar";
+            // 
+            // bloquearVentana
+            // 
+            this.bloquearVentana.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bloquearVentana.Enabled = false;
+            this.bloquearVentana.Image = global::KeyGen.Properties.Resources.security_system;
+            this.bloquearVentana.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bloquearVentana.Name = "bloquearVentana";
+            this.bloquearVentana.Size = new System.Drawing.Size(23, 22);
+            this.bloquearVentana.Text = "Bloquear área de tabajo";
+            // 
+            // ayuda
+            // 
+            this.ayuda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ayuda.Image = global::KeyGen.Properties.Resources.question;
+            this.ayuda.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ayuda.Name = "ayuda";
+            this.ayuda.Size = new System.Drawing.Size(23, 22);
+            this.ayuda.Text = "Ayuda";
+            // 
+            // abrirSesiónToolStripMenuItem
+            // 
+            this.abrirSesiónToolStripMenuItem.Image = global::KeyGen.Properties.Resources.login1;
+            this.abrirSesiónToolStripMenuItem.Name = "abrirSesiónToolStripMenuItem";
+            this.abrirSesiónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.abrirSesiónToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.abrirSesiónToolStripMenuItem.Text = "Abrir sesión...";
+            this.abrirSesiónToolStripMenuItem.Click += new System.EventHandler(this.abrirSesiónToolStripMenuItem_Click);
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Enabled = false;
+            this.cerrarSesiónToolStripMenuItem.Image = global::KeyGen.Properties.Resources.logout;
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Enabled = false;
+            this.guardarToolStripMenuItem.Image = global::KeyGen.Properties.Resources.save;
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.guardarToolStripMenuItem.Text = "Guardar";
+            // 
+            // bloquearEspacioDeTrabajoToolStripMenuItem
+            // 
+            this.bloquearEspacioDeTrabajoToolStripMenuItem.Enabled = false;
+            this.bloquearEspacioDeTrabajoToolStripMenuItem.Image = global::KeyGen.Properties.Resources.security_system;
+            this.bloquearEspacioDeTrabajoToolStripMenuItem.Name = "bloquearEspacioDeTrabajoToolStripMenuItem";
+            this.bloquearEspacioDeTrabajoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.bloquearEspacioDeTrabajoToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.bloquearEspacioDeTrabajoToolStripMenuItem.Text = "Bloquear espacio de trabajo";
+            // 
+            // copiarNombreDeUsuarioToolStripMenuItem
+            // 
+            this.copiarNombreDeUsuarioToolStripMenuItem.Enabled = false;
+            this.copiarNombreDeUsuarioToolStripMenuItem.Image = global::KeyGen.Properties.Resources.copy_user;
+            this.copiarNombreDeUsuarioToolStripMenuItem.Name = "copiarNombreDeUsuarioToolStripMenuItem";
+            this.copiarNombreDeUsuarioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.copiarNombreDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
+            this.copiarNombreDeUsuarioToolStripMenuItem.Text = "Copiar nombre de usuario";
+            // 
+            // copiarContraseñaToolStripMenuItem
+            // 
+            this.copiarContraseñaToolStripMenuItem.Enabled = false;
+            this.copiarContraseñaToolStripMenuItem.Image = global::KeyGen.Properties.Resources.copy_password2;
+            this.copiarContraseñaToolStripMenuItem.Name = "copiarContraseñaToolStripMenuItem";
+            this.copiarContraseñaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.copiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
+            this.copiarContraseñaToolStripMenuItem.Text = "Copiar contraseña";
+            // 
+            // añadirEntradaToolStripMenuItem
+            // 
+            this.añadirEntradaToolStripMenuItem.Enabled = false;
+            this.añadirEntradaToolStripMenuItem.Image = global::KeyGen.Properties.Resources.add_key_icon;
+            this.añadirEntradaToolStripMenuItem.Name = "añadirEntradaToolStripMenuItem";
+            this.añadirEntradaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.añadirEntradaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
+            this.añadirEntradaToolStripMenuItem.Text = "Añadir entrada...";
+            // 
+            // editarVerEntradaToolStripMenuItem
+            // 
+            this.editarVerEntradaToolStripMenuItem.Enabled = false;
+            this.editarVerEntradaToolStripMenuItem.Image = global::KeyGen.Properties.Resources.modify_key_icon;
+            this.editarVerEntradaToolStripMenuItem.Name = "editarVerEntradaToolStripMenuItem";
+            this.editarVerEntradaToolStripMenuItem.ShortcutKeyDisplayString = "Intro";
+            this.editarVerEntradaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
+            this.editarVerEntradaToolStripMenuItem.Text = "Editar/Ver entrada...";
+            // 
+            // borrarEntradaToolStripMenuItem
+            // 
+            this.borrarEntradaToolStripMenuItem.Enabled = false;
+            this.borrarEntradaToolStripMenuItem.Image = global::KeyGen.Properties.Resources.remove_key_icon;
+            this.borrarEntradaToolStripMenuItem.Name = "borrarEntradaToolStripMenuItem";
+            this.borrarEntradaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.borrarEntradaToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
+            this.borrarEntradaToolStripMenuItem.Text = "Borrar entrada";
             // 
             // Main
             // 
@@ -987,6 +1181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.treeViewContext.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1089,7 +1284,30 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn contraseña;
         private System.Windows.Forms.DataGridViewTextBoxColumn url;
         private System.Windows.Forms.DataGridViewTextBoxColumn comentarios;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList treeImageList;
+        private System.Windows.Forms.ContextMenuStrip treeViewContext;
+        private System.Windows.Forms.ToolStripMenuItem cmAddGroup;
+        private System.Windows.Forms.ToolStripMenuItem cmAddSubgroup;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator19;
+        private System.Windows.Forms.ToolStripMenuItem cmEditGroup;
+        private System.Windows.Forms.ToolStripMenuItem cmDeleteGroup;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator20;
+        private System.Windows.Forms.ToolStripMenuItem cmReorganize;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator21;
+        private System.Windows.Forms.ToolStripMenuItem cmSearchInGroup;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator22;
+        private System.Windows.Forms.ToolStripMenuItem cmPrintGroup;
+        private System.Windows.Forms.ToolStripMenuItem cmExportGroup;
+        private System.Windows.Forms.ToolStripMenuItem moverElGrupoHastaElTopeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moverElGrupoUnaPosiciónHaciaArribaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moverElGrupoUnaPosiciónHaciaAbajoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moverElGrupoAlFinalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator23;
+        private System.Windows.Forms.ToolStripMenuItem moverElGrupoUnaPosiciónHaciaLaIzquierdaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moverElGrupoUnaPosiciónHaciaLaDerechaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
+        private System.Windows.Forms.ToolStripMenuItem ordenarListaDeGruposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem archivoTXTToolStripMenuItem;
     }
 }
 

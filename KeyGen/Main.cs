@@ -28,7 +28,6 @@ namespace KeyGen
         public Main(int LoginValue, string LoginUser)
         {
             InitializeComponent();
-            //treeView1.ExpandAll();
 
             this.LoginValue = LoginValue;
             this.LoginUser = LoginUser;
@@ -91,7 +90,7 @@ namespace KeyGen
 
         private void ActiveControls()
         {
-            //treeView1.Visible = true;
+            treeView1.Enabled = true;
             dataGridView1.Visible = true;
 
             // Controles del toolStrip
@@ -154,7 +153,7 @@ namespace KeyGen
             {
                 Image img = BytesToIcon(listCategories[i].Icon);
 
-                imageList1.Images.Add(""+i,img);
+                treeImageList.Images.Add(""+i,img);
             }
         }
 
@@ -192,6 +191,22 @@ namespace KeyGen
                 LoginUser = "";
                 Application.Restart();
             }
+        }
+
+        private void añadirGrupoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFormAddGroup();
+        }
+
+        private void cmAddGroup_Click(object sender, EventArgs e)
+        {
+            openFormAddGroup();
+        }
+
+        private void openFormAddGroup()
+        {
+            addGroup addg = new addGroup();
+            addg.ShowDialog();
         }
     }
 }

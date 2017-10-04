@@ -11,3 +11,4 @@ C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\K
 C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.Register.resources
 C:\Users\USUARIO\Documents\Visual Studio 2017\Projects\KeyGen\KeyGen\bin\Debug\MySql.Data.dll
 C:\Users\USUARIO\Documents\Visual Studio 2017\Projects\KeyGen\KeyGen\bin\Debug\MySql.Data.xml
+C:\Users\USUARIO\documents\visual studio 2017\Projects\KeyGen\KeyGen\obj\Debug\KeyGen.addGroup.resources
